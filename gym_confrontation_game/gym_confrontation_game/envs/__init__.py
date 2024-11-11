@@ -1,0 +1,1 @@
+from gym_confrontation_game.envs.MAConfrontation import ConfrontationEnv

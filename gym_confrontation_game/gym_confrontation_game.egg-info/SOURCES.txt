@@ -1,0 +1,13 @@
+README.md
+setup.py
+gym_confrontation_game/__init__.py
+gym_confrontation_game.egg-info/PKG-INFO
+gym_confrontation_game.egg-info/SOURCES.txt
+gym_confrontation_game.egg-info/dependency_links.txt
+gym_confrontation_game.egg-info/requires.txt
+gym_confrontation_game.egg-info/top_level.txt
+gym_confrontation_game/envs/AttackerDefender1v0.py
+gym_confrontation_game/envs/Grid.py
+gym_confrontation_game/envs/MAConfrontation.py
+gym_confrontation_game/envs/__init__.py
+gym_confrontation_game/envs/utilities.py
