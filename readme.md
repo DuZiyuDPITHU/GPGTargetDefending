@@ -5,14 +5,10 @@ This is a repository modified from [GPG-labeled](https://github.com/arbaazkhan2/
 ## Installation
 
 The code is running on gym-0.11.0 and torch-2.4.1+cu118. Please install corresponding dgl version for graph processing.
-To quickly deploy the code, you can create a conda environment using the `gym0110.yml` file located in the `rl_code` directory. 
+To quickly deploy the code, you can create a conda environment using the `gym0110.yml` file located in the root directory of this reponsitory. 
 
 
 ```
-# Navigate to the `rl_code` directory:
-
-cd rl_code
-
 # Create the conda environment using the provided YAML file:
 
 conda env create -f gym0110.yml
