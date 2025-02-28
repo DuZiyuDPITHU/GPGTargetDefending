@@ -18,7 +18,7 @@ Params
     config (dict): parameter set for training
 """
 
-test_episodes=15
+test_episodes=10
 eps_start=0.01
 eps_end=0.01
 eps_decay=0.996
@@ -104,6 +104,7 @@ for i_episode in range(1, test_episodes+1):
     eps = max(eps_end, eps_decay*eps)   # decrease epsilon
     Collision_rates.append(info['collision rate'])
     Capture_rates.append(info['capture rate'])
-    print('\rEpisode {}\tTotal Score: {:.3f}, Step {:.3f}, Capture Rate {:.3f}, Collision Rate {:.3f}'.format(i_episode, score, step_count, info['capture rate'], info['collision rate']), end="")
-print("All test episodes are done. Average Collision rate: {:.2f}%, Average Capture rate: {:.2f}%".format(np.mean(Collision_rates)*100, np.mean(Capture_rates)*100))
+    print('Episode {}, Total Score: {:.3f}, Step {:.3f}, Capture Count {:.1f}, Collision Count {:.1f}'.format(i_episode, score, step_count, info['capture rate']*env.n_atkr, info['collision rate']*num_agents))
+    # print('\rEpisode {}\tTotal Score: {:.3f}, Step {:.3f}, Capture Count {:.1f}, Collision Count {:.1f}'.format(i_episode, score, step_count, info['capture rate']*env.n_atkr, info['collision rate']*num_agents), end="")
+print("All test episodes are done. Average Collision rate: {:.2f}% ({:.2f}), Average Capture rate: {:.2f}% ({:.2f})".format(np.mean(Collision_rates)*100, np.std(Collision_rates), np.mean(Capture_rates)*100, np.std(Capture_rates)))
 
